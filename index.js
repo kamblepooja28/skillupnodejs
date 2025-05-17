@@ -2,8 +2,8 @@ var express=require('express')
 var bodyParser=require('body-parser')
 var mysql=require('mysql')
 var app=express()
-app.use(bodyParser())
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/",function(request,response){
   response.send("hello from express js....")
 });
